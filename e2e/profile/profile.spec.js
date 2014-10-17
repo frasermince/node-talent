@@ -7,9 +7,9 @@ describe('Profile Page', function(){
     browser.get('/login');
     page = require('./profile.po');
     auth = require('../support/auth');
-    auth.login();
+    auth.login('user@example.com', 'testtest');
   });
   it('should have a title that says "welcome"', function(){
-    expect(page.h1El.getText()).toBe('Welcome!');
+    expect(page.h3El.getText()).toBe('User Example');
   });
 });
