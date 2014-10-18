@@ -11,6 +11,7 @@ var UserSchema = new Schema({
     type: String,
     default: 'user'
   },
+  profile: { type: Schema.Types.ObjectId, ref: 'Profile' }
   hashedPassword: String,
   provider: String,
   salt: String
